@@ -1,8 +1,8 @@
 #include "shellcode.h"
-#include <stddef.h>
+#include <unistd.h>
 
 
 int main()
 {
-    execve("/bin/sh", 0, 0);
+    execl("/bin/sh", "sh", 0, 0);
 }
